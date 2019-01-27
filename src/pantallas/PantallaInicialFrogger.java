@@ -36,7 +36,7 @@ public class PantallaInicialFrogger implements Pantalla {
 	@Override
 	public void inicializarPantalla() {
 		try {
-			imagenOriginalInicial = ImageIO.read(new File("Imagenes/fondoPantallaInicio.jpg"));
+			imagenOriginalInicial = ImageIO.read(new File("src/Imagenes/fondoPantallaInicio.jpg"));
 			if(panelJuego.getWidth() != 0) {
 				imagenReescaladaInicial = imagenOriginalInicial.getScaledInstance(panelJuego.getWidth(), panelJuego.getHeight(), Image.SCALE_SMOOTH);
 			}

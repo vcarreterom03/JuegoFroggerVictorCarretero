@@ -79,7 +79,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		this.panelJuego = panelJuego;
 		tiempoInicial = System.nanoTime();
 		try {
-			imagenOriginal = ImageIO.read(new File("Imagenes/FondoPantalla.PNG"));
+			imagenOriginal = ImageIO.read(new File("src/Imagenes/FondoPantalla.PNG"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -98,7 +98,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		
 		try {
 			sonido = AudioSystem.getClip();
-			sonido.open(AudioSystem.getAudioInputStream(new File("Musicas/musicaFondo.wav")));
+			sonido.open(AudioSystem.getAudioInputStream(new File("src/Musicas/musicaFondo.wav")));
 			sonido.start();
 		} catch (LineUnavailableException e) {
 			// TODO Auto-generated catch block
@@ -115,12 +115,12 @@ public class PantallaJuegoFrogger implements Pantalla {
 
 		crearSpritesEnemigos();
 
-		personaje = new Sprite(50, 70, 400, panelJuego.getHeight() - 70, "Imagenes/SpriteRana.png");
+		personaje = new Sprite(50, 70, 400, panelJuego.getHeight() - 70, "src/Imagenes/SpriteRana.png");
 
-		marcador1 = new Sprite(50, 70, 70, 0, "Imagenes/SpriteRana.png");
-		marcador2 = new Sprite(50, 70, 280, 0, "Imagenes/SpriteRana.png");
-		marcador3 = new Sprite(50, 70, 480, 0, "Imagenes/SpriteRana.png");
-		marcador4 = new Sprite(50, 70, 670, 0, "Imagenes/SpriteRana.png");
+		marcador1 = new Sprite(50, 70, 70, 0, "src/Imagenes/SpriteRana.png");
+		marcador2 = new Sprite(50, 70, 280, 0, "src/Imagenes/SpriteRana.png");
+		marcador3 = new Sprite(50, 70, 480, 0, "src/Imagenes/SpriteRana.png");
+		marcador4 = new Sprite(50, 70, 670, 0, "src/Imagenes/SpriteRana.png");
 
 		int posicionYMarcadores = 0 + marcador1.getAlto();
 
@@ -272,7 +272,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(ANCHO_COCHE, ALTO_COCHE, panelJuego.getWidth()  + separacion[i],
-					panelJuego.getHeight() - 130, 3, 0, "Imagenes/cocheBlanco.png");
+					panelJuego.getHeight() - 130, 3, 0, "src/Imagenes/cocheBlanco.png");
 			cochesBlancosPrimero.add(creador);
 		}
 
@@ -282,7 +282,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(80, 60, 350 - separacion2[i], panelJuego.getHeight() - 210, 4, 0,
-					"Imagenes/cocheRojo.png");
+					"src/Imagenes/cocheRojo.png");
 			cochesRojosPrimero.add(creador);
 		}
 
@@ -290,7 +290,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(ANCHO_COCHE, ALTO_COCHE, panelJuego.getWidth() - 240 + separacion[i],
-					panelJuego.getHeight() - 290, 5, 0, "Imagenes/cocheBlanco.png");
+					panelJuego.getHeight() - 290, 5, 0, "src/Imagenes/cocheBlanco.png");
 			cochesBlancosSegundo.add(creador);
 		}
 
@@ -298,7 +298,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(80, 60, 350 - separacion2[i], panelJuego.getHeight() - 370, 3, 0,
-					"Imagenes/cocheRojo.png");
+					"src/Imagenes/cocheRojo.png");
 			cochesRojosPrimero.add(creador);
 		}
 
@@ -306,7 +306,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(ANCHO_COCHE, ALTO_COCHE, panelJuego.getWidth() - 240 + separacion[i],
-					panelJuego.getHeight() - 530, 3, 0, "Imagenes/tronco.png");
+					panelJuego.getHeight() - 530, 3, 0, "src/Imagenes/tronco.png");
 			troncosIzquierdaPrimero.add(creador);
 		}
 
@@ -314,7 +314,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(ANCHO_COCHE, ALTO_COCHE, 350 - separacion[i], panelJuego.getHeight() - 610, 5, 0,
-					"Imagenes/tronco.png");
+					"src/Imagenes/tronco.png");
 			troncosDerecha.add(creador);
 		}
 
@@ -322,7 +322,7 @@ public class PantallaJuegoFrogger implements Pantalla {
 		for (int i = 0; i < 4; i++) {
 			Sprite creador;
 			creador = new Sprite(ANCHO_COCHE, ALTO_COCHE, panelJuego.getWidth() - 240 + separacion[i],
-					panelJuego.getHeight() - 690, 2, 0, "Imagenes/tronco.png");
+					panelJuego.getHeight() - 690, 2, 0, "src/Imagenes/tronco.png");
 			troncosIzquierdaPrimero.add(creador);
 		}
 

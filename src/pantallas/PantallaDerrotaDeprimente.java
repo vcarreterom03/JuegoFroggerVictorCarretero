@@ -29,12 +29,12 @@ public class PantallaDerrotaDeprimente implements Pantalla {
 	public PantallaDerrotaDeprimente(PanelJuego panelJuego) {
 		this.panelJuego = panelJuego;
 		try {
-			imagenOriginalInicial = ImageIO.read(new File("Imagenes/fondoDerrotaDeprimente.jpg"));
+			imagenOriginalInicial = ImageIO.read(new File("src/Imagenes/fondoDerrotaDeprimente.jpg"));
 			if(panelJuego.getWidth() != 0) {
 				imagenReescaladaInicial = imagenOriginalInicial.getScaledInstance(panelJuego.getWidth(), panelJuego.getHeight(), Image.SCALE_SMOOTH);
 			}
 			sonido = AudioSystem.getClip();
-			sonido.open(AudioSystem.getAudioInputStream(new File("Musicas/musicaVictoria.wav")));
+			sonido.open(AudioSystem.getAudioInputStream(new File("src/Musicas/musicaVictoria.wav")));
 			sonido.start();
 
 		} catch (IOException e) {

@@ -29,14 +29,14 @@ public class PantallaVictoria implements Pantalla {
 	public PantallaVictoria(PanelJuego panelJuego) {
 		this.panelJuego = panelJuego;
 		try {
-			imagenOriginalInicial = ImageIO.read(new File("Imagenes/fondoVictoria.jpg"));
+			imagenOriginalInicial = ImageIO.read(new File("src/Imagenes/fondoVictoria.jpg"));
 			if (panelJuego.getWidth() != 0) {
 				imagenReescaladaInicial = imagenOriginalInicial.getScaledInstance(panelJuego.getWidth(),
 						panelJuego.getHeight(), Image.SCALE_SMOOTH);
 			}
 
 			sonido = AudioSystem.getClip();
-			sonido.open(AudioSystem.getAudioInputStream(new File("Musicas/musicaVictoria.wav")));
+			sonido.open(AudioSystem.getAudioInputStream(new File("src/Musicas/musicaVictoria.wav")));
 			sonido.start();
 
 		} catch (IOException e) {

@@ -30,12 +30,12 @@ public class PantallaDerrota implements Pantalla{
 	public PantallaDerrota(PanelJuego panelJuego) {
 		this.panelJuego = panelJuego;
 		try {
-			imagenOriginalInicial = ImageIO.read(new File("Imagenes/fondoDerrota.jpg"));
+			imagenOriginalInicial = ImageIO.read(new File("src/Imagenes/fondoDerrota.jpg"));
 			if(panelJuego.getWidth() != 0) {
 				imagenReescaladaInicial = imagenOriginalInicial.getScaledInstance(panelJuego.getWidth(), panelJuego.getHeight(), Image.SCALE_SMOOTH);
 			}
 			sonido = AudioSystem.getClip();
-			sonido.open(AudioSystem.getAudioInputStream(new File("Musicas/musicaDerrota.wav")));
+			sonido.open(AudioSystem.getAudioInputStream(new File("src/Musicas/musicaDerrota.wav")));
 			sonido.start();
 
 		} catch (IOException e) {
